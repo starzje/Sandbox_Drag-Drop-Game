@@ -117,6 +117,7 @@ function playAgain() {
   boxRed.style.background = "rgb(20, 0, 0)";
   boxCyan.style.background = "rgb(0, 0, 20)";
   boxGreen.style.background = "rgb(0, 20, 0)";
+  reOrderElements();
 }
 
 // funkcija koja postavlja boju na početno stanje
@@ -135,4 +136,12 @@ function startGame() {
     item.addEventListener("dragover", dragOver);
     item.addEventListener("dragleave", dragLeave);
   });
+}
+
+// svaki put kad se pozove funkcija, izmjeni se redosljed elemenata
+function reOrderElements() {
+  let ul = document.querySelector(".secondary-color-list");
+  for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[(Math.random() * i) | 0]);
+  }
 }
