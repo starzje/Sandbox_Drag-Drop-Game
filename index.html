@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spoji točne brojeve - Igra</title>
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/adf56416fe.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Spoji točne brojeve kako bi obojao blokove s desne strane</h1>
+    <h2 id="brojOdigranihIgri">Broj odigranih igri: 0</h2>
+    <h2 class="mobile">
+      This game is not supported on mobile devices. Please check desktop version
+    </h2>
+    <div id="alert">
+      <div class="alert-title">Pazi malo</div>
+      Spajaš krive brojeve
+    </div>
+    <main class="wrapper">
+      <ul class="draggable-list primary-color-list">
+        <li
+          id="primary-color__1"
+          class="primary-color-list__item"
+          draggable="true"
+        >
+          1 <i class="fa-solid fa-paint-roller"></i>
+        </li>
+        <li
+          id="primary-color__2"
+          class="primary-color-list__item"
+          draggable="true"
+        >
+          2 <i class="fa-solid fa-paint-roller"></i>
+        </li>
+        <li
+          id="primary-color__3"
+          class="primary-color-list__item"
+          draggable="true"
+        >
+          3 <i class="fa-solid fa-paint-roller"></i>
+        </li>
+      </ul>
+      <ul class="draggable-list secondary-color-list">
+        <li id="secondary-color__2" class="secondary-color-list__item">2</li>
+        <li id="secondary-color__3" class="secondary-color-list__item">3</li>
+        <li id="secondary-color__1" class="secondary-color-list__item">1</li>
+      </ul>
+    </main>
+    <div id="alertWin">
+      <div class="alert-title">Bravo</div>
+      Sve si pogodio
+      <button id="btn" onClick="playAgain()">IGRAJ PONOVNO</button>
+    </div>
+  </body>
+</html>
